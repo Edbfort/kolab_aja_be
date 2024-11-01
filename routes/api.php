@@ -47,7 +47,7 @@ Route::middleware('jwt.auth')->group(function () {
     ], function ($router) {
         Route::patch('/', [PublicController::class, 'updateProfile']);
         Route::get('/{id}', [PublicController::class, 'getProfile']);
-        Route::post('/change_password', [PublicController::class, 'resetPassword'])->name('resetPassword');
+        Route::post('/change_password', [PublicController::class, 'resetPassword'])->name('reset_password');
     });
 
     Route::group([
