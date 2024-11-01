@@ -18,9 +18,9 @@ class InsertChangePasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['int,required', 'exsist:user,email'],
-            'passowrd' => ['string','required'],
-            'old_password' => ['string','required']
+            'email' => ['int', 'required', 'exsist:user,email'],
+            'passowrd' => ['string', 'required'],
+            'old_password' => ['string', 'required']
         ];
     }
 
