@@ -11,12 +11,14 @@ use App\Http\Requests\GetMilestoneRequest;
 use App\Http\Requests\GetProyekListRequest;
 use App\Http\Requests\GetTeamRequest;
 use App\Http\Requests\InsertAnggotaKeProyekRequest;
+use App\Http\Requests\InsertChangePasswordRequest;
 use App\Http\Requests\UpdateAcceptDesignBriefRequest;
 use App\Http\Requests\UpdateAcceptMilestoneRequest;
 use App\Http\Requests\UpdateDesignBriefRequest;
 use App\Http\Requests\UpdateProfileRequest;
 use App\Http\Requests\UpdateSelesaiMilestoneRequest;
 use App\Http\Requests\UpdateTerbayarMilestoneRequest;
+use App\Http\Services\Controller\InsertChangePasswordService;
 use App\Http\Services\Controller\UpdateDesignBriefService;
 use App\Http\Services\CreativeHubTeam\GetMemberService;
 use App\Http\Services\Public\CreateOrUpdateBillingRekeningService;
@@ -34,6 +36,7 @@ use App\Http\Services\Public\UpdateAcceptMilestoneService;
 use App\Http\Services\Public\UpdateProfileService;
 use App\Http\Services\Public\UpdateSelesaiMilestoneService;
 use App\Http\Services\Public\UpdateTerbayarMilestoneService;
+use Illuminate\Http\JsonResponse;
 
 class PublicController extends Controller
 {
@@ -158,4 +161,15 @@ class PublicController extends Controller
     {
         return $service->handle($request);
     }
+
+    /**
+     * @param InsertChangePasswordService $service
+     * @param InsertChangePasswordRequest $request
+     * @return JsonResponse
+     */
+    public function resetPassword(InsertChangePasswordService $service, InsertChangePasswordRequest $request): JsonResponse
+    {
+        return $service->handle($request);
+    }
+
 }
