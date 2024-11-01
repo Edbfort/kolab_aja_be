@@ -34,6 +34,7 @@ use App\Http\Services\Public\UpdateAcceptMilestoneService;
 use App\Http\Services\Public\UpdateProfileService;
 use App\Http\Services\Public\UpdateSelesaiMilestoneService;
 use App\Http\Services\Public\UpdateTerbayarMilestoneService;
+use Illuminate\Http\JsonResponse;
 
 class PublicController extends Controller
 {
@@ -158,4 +159,15 @@ class PublicController extends Controller
     {
         return $service->handle($request);
     }
+
+    /**
+     * @param InsertChangePasswordService $service
+     * @param InsertChangePasswordRequest $request
+     * @return JsonResponse
+     */
+    public function resetPassword(InsertChangePasswordService $service, InsertChangePasswordRequest $request): JsonResponse
+    {
+        return $service->handle($request);
+    }
+
 }
