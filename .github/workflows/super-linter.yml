@@ -15,11 +15,6 @@ jobs:
         uses: github/super-linter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE_PHP: true
-          VALIDATE_JS: true
-          VALIDATE_YAML: true
-          VALIDATE_JSON: true
-          VALIDATE_ENV: true
           VALIDATE_MARKDOWN: false
           VALIDATE_JSCPD: false
           VALIDATE_ANSIBLE: false
