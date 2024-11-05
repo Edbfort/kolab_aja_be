@@ -5,6 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class BillingRekening
+ *
+ * @property int $id_user           ID pengguna
+ * @property int $id_bank           ID bank terkait
+ * @property string $nomor_rekening Nomor rekening bank
+ * @property string $nama_pemilik   Nama pemilik rekening
+ * @property string $waktu_buat     Waktu data dibuat
+ * @property string $waktu_ubah     Waktu data diubah
+ */
 class BillingRekening extends Model
 {
     use HasFactory;

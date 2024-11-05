@@ -5,6 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int $id_user
+ * @property int $id_role
+ */
 class UserRoles extends Model
 {
     use HasFactory;
@@ -36,7 +40,6 @@ class UserRoles extends Model
      * @var array
      */
     protected $fillable = [
-        'id',
         'id_user',
         'id_role'
     ];

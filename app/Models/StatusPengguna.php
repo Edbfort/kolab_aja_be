@@ -5,6 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class FilterSpesialisasi
+ *
+ * @property mixed $status
+ * @property string $keterangan
+ */
 class StatusPengguna extends Model
 {
     use HasFactory;

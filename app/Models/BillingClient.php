@@ -4,7 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+/**
+ * Class BillingClient
+ *
+ * @property int $id_user           ID pengguna
+ * @property string $nomor_kartu    Nomor kartu
+ * @property string $nama_depan     Nama depan
+ * @property string $nama_belakang  Nama belakang
+ * @property string $habis_berlaku  Tanggal kedaluwarsa kartu
+ * @property string $cvv            Kode CVV
+ * @property string $waktu_buat     Waktu data dibuat
+ * @property string $waktu_ubah     Waktu data diubah
+ */
 class BillingClient extends Model
 {
     use HasFactory;

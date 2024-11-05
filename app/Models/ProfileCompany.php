@@ -5,6 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class ProfileCompany
+ *
+ * @property int $id_pengguna                ID pengguna yang terkait dengan profil perusahaan
+ * @property string $nama                     Nama perusahaan
+ * @property string $tag_line                 Tagline perusahaan
+ * @property int $jumlah_working_space        Jumlah ruang kerja
+ * @property string $nomor_telepon            Nomor telepon perusahaan
+ * @property string $alamat                   Alamat perusahaan
+ * @property string $website                  Website perusahaan
+ * @property string $deskripsi                Deskripsi perusahaan
+ * @property string $visi_misi                Visi dan misi perusahaan
+ * @property string $waktu_buat               Waktu saat profil perusahaan dibuat
+ * @property string $waktu_ubah               Waktu saat profil perusahaan diubah
+ */
 class ProfileCompany extends Model
 {
     use HasFactory;

@@ -5,6 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class TransaksiPembuatanTeam
+ *
+ * @property int $id
+ * @property int $id_user
+ * @property int $id_cha
+ * @property string $temp_password
+ * @property string $status_ganti_password
+ * @property string $waktu_buat
+ * @property string $waktu_ubah
+ */
 class TransaksiPembuatanTeam extends Model
 {
     use HasFactory;

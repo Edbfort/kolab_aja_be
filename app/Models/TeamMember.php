@@ -5,6 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int $id
+ * @property int $id_team_profile
+ * @property string $path_foto_profile
+ * @property string $nama
+ * @property string $waktu_buat
+ * @property string $waktu_ubah
+ */
 class TeamMember extends Model
 {
     use HasFactory;

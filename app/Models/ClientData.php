@@ -5,6 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class ClientData
+ *
+ * @property int $id_pengguna             ID pengguna yang terkait
+ * @property string $nama                 Nama lengkap pengguna
+ * @property string $nomor_telepon        Nomor telepon pengguna
+ * @property string $nama_perusahaan      Nama perusahaan pengguna
+ * @property string $industri             Industri tempat perusahaan beroperasi
+ * @property string $cangkupan_perusahaan Cangkupan atau skala perusahaan
+ * @property string $waktu_buat           Waktu data dibuat
+ * @property string $waktu_ubah           Waktu data diubah
+ */
 class ClientData extends Model
 {
     use HasFactory;
