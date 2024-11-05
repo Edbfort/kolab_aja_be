@@ -67,13 +67,13 @@ Route::middleware('jwt.auth')->group(function () {
     Route::group([
         'prefix' => 'proyek'
     ], function ($router) {
-        Route::get('/', [PublicController::class, 'getProyekList'])->name('get_project_list');
+        Route::get('/', [PublicController::class, 'getProyekList'])->name('get_proyek_list');
         Route::post('/tambah-anggota', [PublicController::class, 'insertAnggotaKeProyek'])->name('insert_anggota_ke_proyek');
         Route::get('/milestone', [PublicController::class, 'getMilestone'])->name('get_milestone');
         Route::post('/milestone/selesai', [PublicController::class, 'updateSelesaiMilestone'])->name('update_selesai_milestone');
         Route::post('/milestone/accept', [PublicController::class, 'updateAcceptMilestone'])->name('update_accept_milestone');
         Route::post('/milestone/bayar', [PublicController::class, 'updateTerbayarMilestone'])->name('update_terbayar_milestone');
-        Route::get('/{id}', [PublicController::class, 'getDetailProyek'])->name('get_detail_project');
+        Route::get('/{id}', [PublicController::class, 'getDetailProyek'])->name('get_detail_proyek');
     });
 
     Route::group([
@@ -106,7 +106,7 @@ Route::middleware('jwt.auth')->group(function () {
     Route::group([
         'prefix' => 'creative-hub-team'
     ], function ($router) {
-        Route::get('/member', [CreativeHubTeamController::class, 'getMember'])->name('get_member');
+        Route::get('/member', [CreativeHubTeamController::class, 'getMember'])->name('get_member_creative_hub_team');
         Route::post('/member', [CreativeHubTeamController::class, 'insertMember'])->name('insert_member');
         Route::patch('/member', [CreativeHubTeamController::class, 'updateMember'])->name('update_member');
         Route::post('/lamaran-proyek', [CreativeHubTeamController::class, 'insertLamaranProyek'])->name('insert_lamaran_proyek');
