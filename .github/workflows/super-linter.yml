@@ -1,8 +1,8 @@
 name: Super Linter
 
-on:
-  pull_request: null
-  push: null
+on: 
+  pull_request:
+  push:
 
 jobs:
   lint:
@@ -15,13 +15,12 @@ jobs:
         uses: github/super-linter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          VALIDATE: true
           VALIDATE_PHP: true
           VALIDATE_JS: true
           VALIDATE_YAML: true
-          VALIDATE_MARKDOWN: false
           VALIDATE_JSON: true
           VALIDATE_ENV: true
+          VALIDATE_MARKDOWN: false
           VALIDATE_JAVASCRIPT_STANDARD: false
           VALIDATE_JSCPD: false
           VALIDATE_ANSIBLE: false
