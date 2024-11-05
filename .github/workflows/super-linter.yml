@@ -21,7 +21,6 @@ jobs:
           VALIDATE_JSON: true
           VALIDATE_ENV: true
           VALIDATE_MARKDOWN: false
-          VALIDATE_JAVASCRIPT_STANDARD: false
           VALIDATE_JSCPD: false
           VALIDATE_ANSIBLE: false
           VALIDATE_PHP_PSALM: false
