@@ -61,7 +61,7 @@ Route::middleware('jwt.auth')->group(function () {
         'prefix' => 'team'
     ], function ($router) {
         Route::get('/member/{id}', [PublicController::class, 'getMember'])->name('get_member');
-        Route::get('/{id}', [PublicController::class, 'getTeam'])->name('get_name');
+        Route::get('/{id}', [PublicController::class, 'getTeam'])->name('get_team');
     });
 
     Route::group([
