@@ -1,0 +1,25 @@
+name: Super Linter
+
+on:
+  pull_request: null
+  push: null
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_PHP: true
+          VALIDATE_JS: true
+          VALIDATE_YAML: true
+          VALIDATE_MARKDOWN: true
+          VALIDATE_JSON: true
+          VALIDATE_ENV: true
+          # Menyesuaikan untuk file konfigurasi Laravel
+          FILTER_REGEX_EXCLUDE: "(vendor/.*|node_modules/.*)"
