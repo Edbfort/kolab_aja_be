@@ -79,9 +79,9 @@ Route::middleware('jwt.auth')->group(function () {
     Route::group([
         'prefix' => 'design-brief'
     ], function ($router) {
-        Route::get('/', [PublicController::class, 'getDesignBrief'])->name('get_design_breif');
-        Route::post('/', [PublicController::class, 'updateDesignBrief'])->name('update_design_breif');
-        Route::post('/accept', [PublicController::class, 'updateAcceptDesignBrief'])->name('update_accept_design_breif');
+        Route::get('/', [PublicController::class, 'getDesignBrief'])->name('get_design_brief');
+        Route::post('/', [PublicController::class, 'updateDesignBrief'])->name('update_design_brief');
+        Route::post('/accept', [PublicController::class, 'updateAcceptDesignBrief'])->name('update_accept_design_brief');
     });
 
     // Client Routes
