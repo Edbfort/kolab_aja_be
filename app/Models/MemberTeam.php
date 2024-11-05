@@ -5,6 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * Class MemberTeam
+ *
+ * @property int $id_team        ID tim yang menjadi anggota
+ * @property string $nama        Nama anggota tim
+ * @property string $jabatan     Jabatan anggota dalam tim
+ * @property string $role_team    Peran anggota dalam tim
+ * @property string $waktu_buat   Waktu saat lamaran dibuat
+ * @property string $waktu_ubah   Waktu saat lamaran diubah
+ */
 class MemberTeam extends Model
 {
     use HasFactory;

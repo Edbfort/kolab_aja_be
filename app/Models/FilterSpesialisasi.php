@@ -5,6 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class FilterSpesialisasi
+ *
+ * @property string $nama   Nama spesialisasi yang terkait
+ */
 class FilterSpesialisasi  extends Model
 {
     use HasFactory;

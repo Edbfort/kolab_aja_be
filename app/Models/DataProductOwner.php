@@ -5,6 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class DataProductOwner
+ *
+ * @property int $id_pengguna          ID pengguna yang terkait
+ * @property string $nama              Nama pemilik produk
+ * @property string $lokasi            Lokasi pemilik produk
+ * @property string $detail_deskripsi  Deskripsi produk secara detail
+ * @property string $waktu_buat        Waktu data dibuat
+ * @property string $waktu_ubah        Waktu data diubah
+ */
 class DataProductOwner extends Model
 {
     use HasFactory;

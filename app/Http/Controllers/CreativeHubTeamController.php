@@ -31,10 +31,9 @@ class CreativeHubTeamController extends Controller
      * @param InsertMemberRequest $request
      * @param InsertMemberService $service
      */
-
     public function insertMember(InsertMemberRequest $request, InsertMemberService $service)
     {
-    return $service->handle($request);
+        return $service->handle($request);
     }
 
     /**
@@ -46,7 +45,7 @@ class CreativeHubTeamController extends Controller
 
     public function updateMember(UpdateMemberRequest $request, UpdateMemberService $service)
     {
-    return $service->handle($request);
+        return $service->handle($request);
     }
 
     /**
@@ -57,8 +56,8 @@ class CreativeHubTeamController extends Controller
      */
     public function insertLamaranProyek(InsertLamaranProyekRequest $request, InsertLamaranProyekService $service)
     {
-    return $service->handle($request);
+        return $service->handle($request);
     }
 
-    
+
 }

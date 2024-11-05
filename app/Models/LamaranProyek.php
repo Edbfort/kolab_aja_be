@@ -5,6 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class LamaranProyek
+ *
+ * @property int $id_proyek       ID proyek yang terkait
+ * @property int $id_team         ID tim yang melamar proyek
+ * @property string $status       Status lamaran
+ * @property string $waktu_buat   Waktu saat lamaran dibuat
+ * @property string $waktu_ubah   Waktu saat lamaran diubah
+ */
 class LamaranProyek extends Model
 {
     use HasFactory;

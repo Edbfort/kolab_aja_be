@@ -5,6 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class Milestone
+ *
+ * @property int $id_proyek                 ID proyek terkait dengan milestone
+ * @property string $topik                  Topik dari milestone
+ * @property string $deskripsi               Deskripsi dari milestone
+ * @property string|null $tautan             Tautan terkait dengan milestone
+ * @property float $persentase               Persentase penyelesaian milestone
+ * @property string|null $tanggal_tegat      Tanggal target penyelesaian milestone
+ * @property string|null $info_perkembangan  Informasi terbaru mengenai perkembangan milestone
+ * @property string $status                  Status dari milestone (misalnya, aktif, selesai)
+ */
 class Milestone extends Model
 {
     use HasFactory;

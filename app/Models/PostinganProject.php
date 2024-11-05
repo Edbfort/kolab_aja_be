@@ -5,6 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class PostinganProject
+ *
+ * @property int $id_pengguna                ID pengguna yang terkait dengan postingan
+ * @property int $id_project                  ID proyek yang terkait dengan postingan
+ * @property string $judul_postingan          Judul postingan
+ * @property string $deskripsi_postingan      Deskripsi postingan
+ * @property string $waktu_buat               Waktu saat postingan dibuat
+ * @property string $waktu_ubah               Waktu saat postingan diubah
+ */
 class PostinganProject extends Model
 {
     use HasFactory;

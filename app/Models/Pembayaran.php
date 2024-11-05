@@ -5,6 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+/**
+ * Class Pembayaran
+ *
+ * @property int $id_user                  ID pengguna yang melakukan pembayaran
+ * @property float $nominal                Jumlah nominal pembayaran
+ * @property int $id_tipe_pembayaran       ID jenis tipe pembayaran
+ * @property string $tanggal_pembayaran     Tanggal pembayaran dilakukan
+ * @property string $waktu_buat             Waktu saat entri pembayaran dibuat
+ * @property string $waktu_ubah             Waktu saat entri pembayaran diubah
+ */
 class Pembayaran extends Model
 {
     use HasFactory;

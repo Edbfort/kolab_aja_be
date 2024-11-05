@@ -101,62 +101,116 @@ class PublicController extends Controller
      * @param GetMemberRequest $request
      * @param GetMemberService $service
      */
-
     public function getMember(GetMemberRequest $request, GetMemberService $service, $id)
     {
         return $service->handle($id);
     }
 
+    /**
+     * @param GetDetailProyekRequest $request
+     * @param GetDetailProyekService $service
+     * @param $id
+     * @return JsonResponse
+     */
     public function getDetailProyek(GetDetailProyekRequest $request, GetDetailProyekService $service, $id)
     {
         return $service->handle($id);
     }
 
+    /**
+     * @param GetProyekListRequest $request
+     * @param GetProyekListService $service
+     * @return JsonResponse
+     */
     public function getProyekList(GetProyekListRequest $request, GetProyekListService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param GetDesignBriefRequest $request
+     * @param GetDesignBriefService $service
+     * @return JsonResponse
+     */
     public function getDesignBrief(GetDesignBriefRequest $request, GetDesignBriefService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param InsertAnggotaKeProyekRequest $request
+     * @param InsertAnggotaKeProyekService $service
+     * @return JsonResponse
+     */
     public function insertAnggotaKeProyek(InsertAnggotaKeProyekRequest $request, InsertAnggotaKeProyekService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param GetMilestoneRequest $request
+     * @param GetMilestoneService $service
+     * @return JsonResponse
+     */
     public function getMilestone(GetMilestoneRequest $request, GetMilestoneService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param UpdateSelesaiMilestoneRequest $request
+     * @param UpdateSelesaiMilestoneService $service
+     * @return JsonResponse
+     */
     public function updateSelesaiMilestone(UpdateSelesaiMilestoneRequest $request, UpdateSelesaiMilestoneService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param UpdateAcceptMilestoneRequest $request
+     * @param UpdateAcceptMilestoneService $service
+     * @return JsonResponse
+     */
     public function updateAcceptMilestone(UpdateAcceptMilestoneRequest $request, UpdateAcceptMilestoneService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param UpdateTerbayarMilestoneRequest $request
+     * @param UpdateTerbayarMilestoneService $service
+     * @return JsonResponse
+     */
     public function updateTerbayarMilestone(UpdateTerbayarMilestoneRequest $request, UpdateTerbayarMilestoneService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param GetSpesialisasiService $service
+     * @return JsonResponse
+     */
     public function getSpesialisasi(GetSpesialisasiService $service)
     {
         return $service->handle();
     }
 
+    /**
+     * @param UpdateAcceptDesignBriefRequest $request
+     * @param UpdateAcceptDesignBriefService $service
+     * @return JsonResponse
+     */
     public function updateAcceptDesignBrief(UpdateAcceptDesignBriefRequest $request, UpdateAcceptDesignBriefService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param UpdateDesignBriefRequest $request
+     * @param UpdateDesignBriefService $service
+     * @return JsonResponse
+     */
     public function updateDesignBrief(UpdateDesignBriefRequest $request, UpdateDesignBriefService $service)
     {
         return $service->handle($request);

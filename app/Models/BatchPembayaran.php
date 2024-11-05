@@ -5,6 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int $id_milestone
+ * @property int $id_pembayaran
+ * @property string $waktu_buat
+ * @property string $waktu_ubah
+ */
 class BatchPembayaran extends Model
 {
     use HasFactory;

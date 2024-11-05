@@ -14,6 +14,7 @@ use App\Http\Services\Client\GetPaymentProyekService;
 use App\Http\Services\Client\InsertProyekService;
 use App\Http\Services\Client\UpdateBillingClientService;
 use App\Http\Services\Client\UpdatePaymentProyekService;
+use Illuminate\Http\JsonResponse;
 
 class ClientController extends Controller
 {
@@ -55,17 +56,26 @@ class ClientController extends Controller
      * @param GetControllerListRequest $request
      * @param GetControllerListService $service
      */
-
     public function getControllerList(GetControllerListRequest $request, GetControllerListService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param GetPaymentProyekRequest $request
+     * @param GetPaymentProyekService $service
+     * @return JsonResponse
+     */
     public function getPaymentProyek(GetPaymentProyekRequest $request, GetPaymentProyekService $service)
     {
         return $service->handle($request);
     }
 
+    /**
+     * @param UpdatePaymentProyekRequest $request
+     * @param UpdatePaymentProyekService $service
+     * @return JsonResponse
+     */
     public function updatePaymentProyek(UpdatePaymentProyekRequest $request, UpdatePaymentProyekService $service)
     {
         return $service->handle($request);
