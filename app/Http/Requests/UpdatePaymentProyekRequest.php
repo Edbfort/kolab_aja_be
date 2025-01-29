@@ -43,7 +43,7 @@ class UpdatePaymentProyekRequest extends FormRequest
     public function rules()
     {
         return [
-            'id_proyek' => 'required|string',
+            'id_proyek' => 'required|numeric',
         ];
     }
 
