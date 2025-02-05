@@ -50,7 +50,7 @@ class UpdateProfileRequest extends FormRequest
             'email' => 'nullable|string',
             'password' => 'min:8|string',
             'lokasi' => 'string',
-            'nomor_telepon' =>'nullable|string|max:13',
+            'nomor_telepon' =>'nullable|string|max_digits:15',
             'alamat' =>'nullable|string',
             'profil_detail' =>'nullable|string',
             'website' =>'nullable|string',
