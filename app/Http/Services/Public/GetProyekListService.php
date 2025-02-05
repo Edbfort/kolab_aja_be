@@ -44,12 +44,15 @@ class GetProyekListService
             ]);
 
             $where = array_merge($where, [
-                'proyek.id_status_proyek' => 1
+                'proyek.id_status_proyek' => 1,
+                'proyek.status_terima_proyek' => 1
             ]);
         } else {
             $select = array_merge($select, [
+                'proyek.status_terima_proyek',
+                'proyek.lokasi_dokumen as proyek_lokasi_dokumen',
                 'db.link_meeting',
-                'db.lokasi_dokumen as design_brief_lokasi_dokumen'
+                'db.lokasi_dokumen as design_brief_lokasi_dokumen',
             ]);
         }
 
