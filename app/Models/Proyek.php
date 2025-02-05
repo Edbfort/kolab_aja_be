@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property bool $status_lunas            Status lunas pembayaran proyek
  * @property string $perkembangan          Perkembangan proyek
  * @property int $id_status_proyek         ID Status proyek
+ * @property boolean $status_terima_proyek
  * @property string $waktu_buat            Waktu saat proyek dibuat
  * @property string $waktu_ubah            Waktu saat proyek diubah
  */
@@ -63,6 +64,7 @@ class Proyek extends Model
         'status_lunas',
         'perkembangan',
         'id_status_proyek',
+        'status_terima_proyek',
         'waktu_buat',
         'waktu_ubah',
     ];
@@ -83,10 +85,8 @@ class Proyek extends Model
 
         static::saving(function ($model) {
             if ($model->exists) {
-                // Set waktu_ubah to the current timestamp when updating a record
                 $model->waktu_ubah = $model->freshTimestamp();
             } else {
-                // Set waktu_buat to the current timestamp when creating a new record
                 $model->waktu_buat = $model->freshTimestamp();
             }
         });

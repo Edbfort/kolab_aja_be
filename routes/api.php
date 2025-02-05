@@ -99,6 +99,8 @@ Route::middleware('jwt.auth')->group(function () {
     Route::group([
         'prefix' => 'controller'
     ], function ($router) {
+        Route::get('/invite-request', [ControllerController::class, 'getInviteRequest'])->name('get_invite_request');
+        Route::patch('/invite-request/{id_proyek}', [ControllerController::class, 'updateInviteRequest'])->name('update_invite_request');
         Route::get('/tambah-milestone', [ControllerController::class, 'getBuatMilestone'])->name('get_buat_milestone');
         Route::post('/tambah-milestone', [ControllerController::class, 'insertBuatMilestone'])->name('insert_buat_milestone');
     });

@@ -89,11 +89,8 @@ class GetProfileService
         $data = array_merge($data, $pengguna->toArray());
 
         $result['data_pengguna'] = $data;
-
         $result['data_pengguna']['spesialisasi'] = json_decode($result['data_pengguna']['spesialisasi'], true);
-
         $result['spesialisasi'] = Spesialisasi::select('nama')->get()->toArray();
-
         $result['status_boleh_edit'] = isset($data['id_status_pengguna']);
 
         return response()->json(['data' => $result, 'message' => 'Data berhasil di ambil'], 200);
