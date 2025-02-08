@@ -2,6 +2,7 @@
 
 namespace App\Http\Services\Client;
 
+use App\Http\Requests\InsertProyekRequest;
 use App\Http\Utility\UploadFileUtility;
 use App\Models\Proyek;
 use Illuminate\Support\Facades\Auth;
@@ -9,7 +10,7 @@ use DateTime;
 
 class InsertProyekService
 {
-    public function handle($request)
+    public function handle(InsertProyekRequest $request)
     {
         $lokasiDokumen = null;
         if ($request->has('file_dokumen')) {

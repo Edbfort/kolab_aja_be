@@ -17,7 +17,7 @@ class GetInviteRequestService
     {
         $idUser = Auth::id();
 
-        $pendingRequest = Proyek::where(['status_terima_proyek', 0, 'id_controller', $idUser])->get();
+        $pendingRequest = Proyek::where('status_terima_proyek', 0)->where('id_controller', $idUser)->get();
 
         $data = ['dataPendingRequest' => $pendingRequest->toArray()];
 
