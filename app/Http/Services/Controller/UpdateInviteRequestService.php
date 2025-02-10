@@ -25,7 +25,7 @@ class UpdateInviteRequestService
             DB::connection();
             DB::beginTransaction();
 
-            $proyek = Proyek::where(['id' => $idProyek, 'id_controller' => $idUser])->first();
+            $proyek = Proyek::where('id', $idProyek)->where('id_controller', $idUser)->where('status_terima_proyek', 0)->first();
             if (!$proyek) {
                 return response()->json(['errors' => 'Data proyek tidak di temukan'], 404);
             }
