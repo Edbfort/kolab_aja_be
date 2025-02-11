@@ -40,7 +40,7 @@ class InsertProyekRequest extends FormRequest
             'judul_proyek' => 'required|string|max:128',
             'deskripsi_proyek' => 'required|string',
             'spesialisasi' => 'required',
-            'anggaran' => 'required|integer',
+            'anggaran' => 'required|integer|max:1000000000',
             'tanggal_tegat' => 'required|date',
             'file_dokumen' => 'required|max:20000|mimes:jpeg,jpg,png,doc,docx,pdf,xls,xlsx,zip'
         ];
