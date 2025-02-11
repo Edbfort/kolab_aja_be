@@ -5,6 +5,7 @@ namespace App\Http\Services\Controller;
 use App\Models\Milestone;
 use App\Models\Proyek;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class GetBuatMilestoneService
 {
@@ -15,7 +16,7 @@ class GetBuatMilestoneService
             'ut.id as team_id',
             'ut.nama as team_nama',
             'proyek.judul_proyek as proyek_judul_proyek',
-            'proyek.anggaran as proyek_anggaran',
+            DB::raw('FLOOR(proyek.team_fee + (proyek.controller_fee * proyek.anggaran / 100)) as proyek_anggaran'),
             'proyek.tanggal_tegat as proyek_tanggal_tegat',
         ])
             ->join('users as ut', 'ut.id', '=', 'proyek.id_team')
