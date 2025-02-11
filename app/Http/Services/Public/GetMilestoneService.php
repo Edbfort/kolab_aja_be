@@ -17,7 +17,7 @@ class GetMilestoneService
             'ut.id as team_id',
             'ut.nama as team_nama',
             'proyek.judul_proyek as proyek_judul_proyek',
-            'proyek.anggaran as proyek_anggaran',
+            DB::raw('FLOOR(proyek.team_fee + (proyek.controller_fee * proyek.anggaran / 100)) as proyek_anggaran'),
             'proyek.tanggal_tegat as proyek_tanggal_tegat',
             'proyek.perkembangan as proyek_perkembangan'
         ])

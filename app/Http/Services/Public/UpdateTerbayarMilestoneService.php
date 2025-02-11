@@ -91,7 +91,7 @@ class UpdateTerbayarMilestoneService
         )) {
             $pembayaran = Pembayaran::create([
                 'id_user' => $proyek->id_controller,
-                'nominal' => (int)((int)$proyek->controller_fee * $proyek->anggaran),
+                'nominal' => (int)((int)$proyek->controller_fee * $proyek->anggaran / 100),
                 'id_tipe_pembayaran' => 2,
                 'waktu_buat' => new DateTime(),
                 'waktu_ubah' => new DateTime(),
